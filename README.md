@@ -58,15 +58,7 @@ I'm a frontend developer based in Alexandria, Egypt, focused on building interfa
 
 ---
 
-### github stats
 
-<div align="center">
-
-![Marina's GitHub stats](https://github-readme-stats.vercel.app/api?username=marinafranswa&show_icons=true&theme=rose_pine&hide_border=true&bg_color=00000000&title_color=FF6EB4&icon_color=8B5CF6&text_color=a0aec0)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=marinafranswa&layout=compact&theme=rose_pine&hide_border=true&bg_color=00000000&title_color=FF6EB4&text_color=a0aec0)
-
-</div>
 
 ---
 
