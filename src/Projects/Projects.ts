@@ -1,4 +1,4 @@
-import linkedPost from "@/assets/Screenshot 2026-05-03 185739.png";
+import linkedPost from "@/assets/Screenshot 2026-06-11 004332.png";
 import freshCart from "@/assets/Screenshot 2026-05-06 025544.png";
 import adasa from "@/assets/Screenshot 2026-05-06 025908.png";
 import { StaticImageData } from "next/image";
@@ -19,7 +19,6 @@ export type Project = {
   gridLine: string;
   accent: string;
 };
-
 
 export const projects: Project[] = [
   {

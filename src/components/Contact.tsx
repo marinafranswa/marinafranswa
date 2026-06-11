@@ -1,137 +1,74 @@
-'use client';
-import { Mail, GitFork, Link2, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
-import Link from 'next/link';
-import { useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import meWaving from "@/assets/meWaving.png"
+import { contacts } from "@/Projects/contact";
 
-const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'marinaafranswa@gmail.com', href: 'mailto:marinaafranswa@gmail.com', accent: 'text-pink', bg: 'bg-pink/10 border-pink/25' },
-  { icon: Phone, label: 'Phone', value: '+201556014667', href: 'tel:+201556014667', accent: 'text-purple', bg: 'bg-purple/10 border-purple/25' },
-  { icon: MapPin, label: 'Location', value: 'Alexandria, Egypt', href: '#', accent: 'text-sky', bg: 'bg-sky/10 border-sky/25' },
-  { icon: GitFork, label: 'GitHub', value: 'github.com/marinafranswa', href: 'https://github.com/marinafranswa', accent: 'text-yellow', bg: 'bg-yellow/10 border-yellow/25' },
-  { icon: Link2, label: 'LinkedIn', value: 'linkedin.com/in/marinafranswa', href: 'https://linkedin.com/in/marinafranswa', accent: 'text-pink', bg: 'bg-pink/10 border-pink/25' },
-];
-
-export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.open(`mailto:marinaafranswa@gmail.com?subject=${subject}&body=${body}`);
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-  };
+export default function ContactMe() {
+ 
 
   return (
-    <section id="contact" className="relative py-24 px-6 pb-16 overflow-hidden">
-      <div
-        className="blob w-112.5 h-112.5 -bottom-24 left-1/2 -translate-x-1/2 opacity-15"
-        style={{ background: "radial-gradient(circle, #FF6EB4, #8B5CF6)" }}
-      />
+    <section id="contact" className="border-4 border-black py-16 px-8 bg-[#f5f5f0]">
+      <div className="text-center mb-16">
+        <div className="px-3 py-2 bg-teal-400 border-4 shadow-[4px_4px_0px_0px_black] rounded-md border-black mx-auto hover:rotate-3 w-42 inline-block">
+          <h2 className="text-zinc-800">Contact Me</h2>
+        </div>
+      
+      </div>
 
-      <div className="max-w-5xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="section-label mb-4">Get In Touch</p>
-          <h2
-            className="font-display font-extrabold"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
-          >
-            Let&apos;s <span className="text-gradient italic">create</span>{" "}
-            together
-          </h2>
-          <p className="text-muted mt-4 max-w-md mx-auto leading-relaxed font-light text-sm md:text-base">
-            I&apos;m actively seeking new opportunities. Whether you have a
-            project in mind or just want to say hello — my inbox is always open!
+      <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* LEFT */}
+        <div>
+          <h3 className="text-2xl font-extrabold mb-5">
+            Let&apos;s build something <span className="font-display text-pink-500">together</span>
+          </h3>
+          <div className="border-2 w-64 border-black shadow-[4px_4px_0px_0px_black] rounded-full bg-white p-4 font-display mb-5">
+            <Image src={meWaving} alt="me" className="object-cover  block" />
+          </div>
+          <div className="border-l-4 border-amber-400 pl-4">
+            <p className="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-2">
+              Available for
+            </p>
+            <ul className="space-y-2">
+              {[
+                "Freelance & contract work",
+                "Full-time frontend roles",
+                "Open source collaboration",
+              ].map((item) => (
+                <li key={item} className="text-sm flex gap-2">
+                  <span className="text-pink-500">→</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="flex flex-col gap-4">
+          <p className="text-xs font-extrabold uppercase tracking-wider">
+            Reach me on
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Info cards */}
-          <div className="flex flex-col gap-3">
-            {contactInfo.map(
-              ({ icon: Icon, label, value, href, accent, bg }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="card flex items-center gap-4 p-4 no-underline group"
-                >
-                  <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${bg} ${accent} transition-transform duration-200 group-hover:scale-110`}
-                  >
-                    <Icon size={17} />
-                  </div>
-                  <div>
-                    <p className="text-muted text-[10px] font-semibold tracking-widest uppercase">
-                      {label}
-                    </p>
-                    <p className="text-white text-sm font-medium">{value}</p>
-                  </div>
-                </Link>
-              ),
-            )}
-          </div>
-
-          {/* Form */}
-          <div className="card p-6 md:p-8">
-            <div className="flex gap-1 items-center mb-6">
-              <p className="font-display text-xl md:text-2xl font-bold ">
-                Send a message!
-              </p>
-              <MessageCircle />
-            </div>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="Your name"
-                value={form.name}
-                onChange={(e) =>
-                  setForm((p) => ({ ...p, name: e.target.value }))
-                }
-                required
-                className="input-field"
-              />
-              <input
-                type="email"
-                placeholder="Your email"
-                value={form.email}
-                onChange={(e) =>
-                  setForm((p) => ({ ...p, email: e.target.value }))
-                }
-                required
-                className="input-field"
-              />
-              <textarea
-                placeholder="Your message..."
-                value={form.message}
-                onChange={(e) =>
-                  setForm((p) => ({ ...p, message: e.target.value }))
-                }
-                required
-                rows={5}
-                className="input-field resize-y"
-              />
-              <button
-                type="submit"
-                className="btn-primary justify-center w-full"
+          {contacts.map((c) => (
+            <Link
+              key={c.label}
+              href={c.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 border-2 border-black shadow-[4px_4px_0px_0px_black] rounded-md bg-white p-4 font-display hover:-translate-y-1 hover:shadow-[4px_6px_0px_0px_black] transition-all duration-200"
+            >
+              <div
+                className={`w-12 h-12 rounded-full border-4 border-black flex items-center justify-center text-xl shrink-0 ${c.iconBg}`}
               >
-                {sent ? (
-                  "✅ Message sent!"
-                ) : (
-                  <>
-                    <Send size={15} /> Send Message
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
+                <c.icon aria-hidden="true" />
+              </div>
+              <div>
+                <p className="text-xs text-zinc-500 font-bold uppercase tracking-wider">
+                  {c.label}
+                </p>
+                <p className="text-sm font-extrabold">{c.value}</p>
+              </div>
+            </Link>
+          ))}
         </div>
-
-        {/* Footer */}
       </div>
     </section>
   );

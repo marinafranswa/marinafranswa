@@ -1,148 +1,83 @@
-'use client';
-import { MapPin, GraduationCap, Calendar, Star, Zap, Mail } from 'lucide-react';
+import React from 'react'
+import {
+  Card,
+  CardContent,
+} from "@/components/ui/card";
+import img4 from "@/assets/4.png"
+import img3 from "@/assets/3.png"
+import img2 from "@/assets/2.png"
+import img1 from "@/assets/1.png"
 import Image from 'next/image';
-import meImage from "@/assets/F523BEC3-0A1E-4DF8-9281-F3B320B66B78.jpeg";
-const stats = [
-  { value: '2+', label: 'Years Experience', color: 'text-pink' },
-  { value: '10+', label: 'Technologies', color: 'text-purple' },
-  { value: '2', label: 'Projects Shipped', color: 'text-sky' },
-  { value: '3.16', label: 'GPA / 4.0', color: 'text-yellow' },
-];
-
-const info = [
-  { icon: MapPin, text: 'Alexandria, Egypt', color: 'text-pink' },
-  { icon: Calendar, text: '2 Years Experience', color: 'text-purple' },
-  { icon: GraduationCap, text: 'B.Sc. Computers & IT', color: 'text-sky' },
-];
-
 export default function About() {
   return (
-    <section id="about" className="relative py-24 px-6 overflow-hidden">
-      {/* Decorative center line */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full opacity-10 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to bottom, transparent, #8B5CF6, transparent)",
-        }}
-      />
-
-      <div className="max-w-5xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="section-label mb-4">About Me</p>
-          <h2
-            className="font-display font-extrabold"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
-          >
-            The girl behind the{" "}
-            <span className="text-gradient-pink italic">code</span>
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Avatar */}
-          <div className="flex justify-center">
-            <div className="relative w-64 h-64 md:w-72 md:h-72">
-              {/* Orbit ring */}
-              <div className="absolute -inset-6 border border-dashed border-pink/30 rounded-full animate-spinSlow" />
-              {/* Orbit dot */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-pink shadow-[0_0_12px_#FF6EB4]" />
-
-              {/* Avatar circle */}
-              <div
-                className="w-full h-full rounded-full flex items-center justify-center text-8xl relative overflow-hidden"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(255,110,180,0.2), rgba(139,92,246,0.3), rgba(56,189,248,0.2))",
-                  border: "3px solid rgba(255,110,180,0.3)",
-                  boxShadow:
-                    "0 0 60px rgba(255,110,180,0.2), inset 0 0 60px rgba(139,92,246,0.1)",
-                }}
-              >
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(255,110,180,0.1), transparent)",
-                  }}
-                />
-                <Image src={meImage} alt="me" height={150} width={150} />
-              </div>
-
-              {/* Floating badge 1 */}
-              <div className="absolute -top-2 -right-10 bg-dark-card border border-pink/20 rounded-xl px-3 py-2 flex items-center gap-1.5 shadow-xl animate-float">
-                <Star size={12} className="text-yellow fill-yellow" />
-                <span className="text-yellow text-xs font-medium">
-                  React Pro
-                </span>
-              </div>
-
-              {/* Floating badge 2 */}
-              <div className="absolute -bottom-2 -left-12 bg-dark-card border border-sky/20 rounded-xl px-3 py-2 flex items-center gap-1.5 shadow-xl animate-floatSlow">
-                <Zap size={12} className="text-yellow fill-yellow" />
-                <span className="text-sky text-xs font-medium"> Next.js</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div>
-            <p className="text-muted leading-relaxed mb-5 font-light">
-              I&apos;m a{" "}
-              <span className="text-pink font-semibold">
-                Frontend Developer
-              </span>{" "}
-              from Alexandria, Egypt with 2 years of professional experience
-              building beautiful, scalable web applications. I thrive at the
-              intersection of design and code — turning Figma mockups into
-              pixel-perfect, responsive interfaces.
+    <section id='about' className="border-4 border-black py-8 px-4">
+      <div className="px-3 py-2 bg-amber-400 border-4 shadow-[4px_4px_0px_0px_black] rounded-md border-black mx-auto hover:rotate-3 w-30 ">
+        <h2 className="text-center text-zinc-800">About me</h2>
+      </div>
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-8 py-8">
+        <Card className="relative w-full  flex-1 font-display shadow-[4px_4px_0px_0px_black] rounded-md hover:translate-x-1 hover:translate-y-1 transition-all duration-150 border-2 border-black py-3 px-4 overflow-visible">
+          <Image
+            className="object-contain absolute -top-6 -right-6 z-10"
+            src={img1}
+            width={60}
+            height={60}
+            alt="image1"
+          />
+          <CardContent>
+            <h3 className="text-2xl text-teal-500 my-3 font-extrabold">
+              Who am I?
+            </h3>
+            <p className="mb-6 text-lg font-bold">
+              I&apos;m a Frontend Developer from Alexandria, Egypt with 2 years
+              of professional experience building beautiful, scalable web
+              applications. I thrive at the intersection of design and code —
+              turning Figma mockups into pixel-perfect, responsive interfaces.
             </p>
-            <p className="text-muted leading-relaxed mb-8 font-light">
-              My stack revolves around{" "}
-              <span className="text-purple font-semibold">
-                React.js & Next.js
-              </span>
-              , and I love working with TypeScript, Tailwind CSS, and modern
+          </CardContent>
+          <Image
+            className="object-contain absolute -bottom-6 -left-6 z-10 animate-spinSlow"
+            src={img2}
+            width={60}
+            height={60}
+            alt="image1"
+          />
+        </Card>
+        <Card className="relative w-full flex-1 font-display shadow-[4px_4px_0px_0px_black] rounded-md hover:translate-x-1 hover:translate-y-1 transition-all duration-150 border-2 border-black py-3 px-4 overflow-visible">
+          <Image
+            className="object-contain absolute -top-6 -right-6 z-10 animate-spinSlow"
+            src={img3}
+            width={60}
+            height={60}
+            alt="image1"
+          />
+          <CardContent>
+            <p className="my-10 text-lg font-bold">
+              Crafting pixel-perfect, responsive web experiences with modern
+              tools — turning ideas into interfaces that captivate & perform
+              using React.js & Next.js, TypeScript, Tailwind CSS, and modern
               state management. I believe great UX comes from both technical
               precision and creative vision.
             </p>
-
-            {/* Info pills */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {info.map(({ icon: Icon, text, color }) => (
-                <div
-                  key={text}
-                  className="flex items-center gap-2 bg-dark-card rounded-full px-4 py-1.5 text-sm text-muted"
-                  style={{ border: "1px solid rgba(196,181,253,0.1)" }}
-                >
-                  <Icon size={13} className={color} />
-                  {text}
-                </div>
-              ))}
-            </div>
-
-            <a href="mailto:marinaafranswa@gmail.com" className="btn-primary">
-              Let&apos;s Connect{" "}
-              <Mail size={14} className="text-purple-300" />
-            </a>
-          </div>
+          </CardContent>
+          <Image
+            className="object-contain absolute -bottom-6 -left-6 z-10 "
+            src={img4}
+            width={60}
+            height={60}
+            alt="image1"
+          />
+        </Card>
+      </div>
+      <div className="flex  justify-center flex-col lg:flex-row gap-3 cursor-pointer">
+        {" "}
+        <div className="bg-pink-500 font-display shadow-[4px_4px_0px_0px_black] rounded-lg hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 border-2 border-black py-3 px-4">
+          Alexandria,Egypt
         </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20">
-          {stats?.map(({ value, label, color }) => (
-            <div key={label} className="card p-6 md:p-8 text-center">
-              <div
-                className={`font-display text-4xl md:text-5xl font-black mb-1 ${color}`}
-              >
-                {value}
-              </div>
-              <div className="text-muted text-xs md:text-sm font-medium">
-                {label}
-              </div>
-            </div>
-          ))}
+        <div className="bg-amber-400 font-display shadow-[4px_4px_0px_0px_black] rounded-lg hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 border-2 border-black py-3 px-4">
+          Bs. in computers and IT
+        </div>
+        <div className="bg-teal-400 font-display shadow-[4px_4px_0px_0px_black] rounded-lg hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150 border-2 border-black py-3 px-4">
+          2 Years Experience
         </div>
       </div>
     </section>
