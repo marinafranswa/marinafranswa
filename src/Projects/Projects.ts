@@ -1,6 +1,10 @@
+
 import linkedPost from "@/assets/Screenshot 2026-06-11 004332.png";
 import freshCart from "@/assets/Screenshot 2026-05-06 025544.png";
 import adasa from "@/assets/Screenshot 2026-05-06 025908.png";
+import nutriplan from "@/assets/Screenshot 2026-06-15 022722.png";
+import triviaQuiz from "@/assets/Screenshot 2026-06-15 023959.png";
+import contactHub from "@/assets/Screenshot 2026-06-15 025046.png";
 import { StaticImageData } from "next/image";
 
 export type Project = {
@@ -88,6 +92,72 @@ export const projects: Project[] = [
     ],
     image: adasa,
     tag: "Blog",
+    tagColor: "bg-sky/10 border-sky/25 text-sky",
+    iconBg: "bg-sky/10 border-sky/25 text-sky",
+    gridBg: "from-sky/10 to-purple/10",
+    gridLine: "rgba(56,189,248,0.1)",
+    accent: "text-sky",
+  },
+  {
+    title: "nutriplan",
+    liveLink: "https://nutriplan-bice.vercel.app/",
+    link: "https://github.com/marinafranswa/nutriplan",
+    subtitle: " meal planning Web Application",
+    description:
+      "NutriPlan is a Food, Nutrition & Fitness Planner web application. The HTML and CSS are ready - you need to implement the JavaScript functionality.",
+    tech: ["HTML", "CSS", "Bootstrap", "JavaScript", "Fetch API"],
+    highlights: [
+      "filtering with dynamic data rendering using Vanilla JavaScrip",
+      "Integrated a third-party nutrition API to enable real-time meal search",
+      "Implemented local storage to persist user data across sessions",
+      " ensuring a seamless and stateful experience without a backend.",
+    ],
+    image: nutriplan,
+    tag: "MealPrep/Fitness",
+    tagColor: "bg-sky/10 border-sky/25 text-sky",
+    iconBg: "bg-sky/10 border-sky/25 text-sky",
+    gridBg: "from-sky/10 to-purple/10",
+    gridLine: "rgba(56,189,248,0.1)",
+    accent: "text-sky",
+  },
+  {
+    title: "TreviaQuiz",
+    liveLink: "https://trevia-quiz-website.vercel.app/",
+    link: "https://github.com/marinafranswa/trevia-quiz-website",
+    subtitle: "Trevia Quiz Web Application",
+    description:
+      "A dynamic trivia quiz web application that generates randomized questions across multiple topics to test user knowledge, built with HTML, CSS, and Vanilla JavaScript and deployed on Vercel",
+    tech: ["HTML", "CSS", "Bootstrap", "JavaScript", "Fetch API"],
+    highlights: [
+      "Using plain JavaScript to fetch data",
+      "enders randomized questions and tracks user answers in real time.",
+      "Implemented score tracking and result feedback logic to deliver an engaging,",
+      "responsive quiz experience across devices.",
+    ],
+    image: triviaQuiz,
+    tag: "Quizez",
+    tagColor: "bg-sky/10 border-sky/25 text-sky",
+    iconBg: "bg-sky/10 border-sky/25 text-sky",
+    gridBg: "from-sky/10 to-purple/10",
+    gridLine: "rgba(56,189,248,0.1)",
+    accent: "text-sky",
+  },
+  {
+    title: "ContactHub",
+    liveLink: "https://contact-hub-ashen-five.vercel.app/",
+    link: "https://github.com/marinafranswa/contactHub",
+    subtitle: "Smart Contact Manager web Application",
+    description:
+      "A responsive contact management web application built with HTML, CSS, and Vanilla JavaScript, allowing users to efficiently organize and manage their personal contacts entirely in the browser.",
+    tech: ["HTML", "CSS", "Bootstrap", "JavaScript", "Fetch API"],
+    highlights: [
+      "Implemented full CRUD functionality (add, edit, delete) for contacts using Vanilla JavaScript with a clean, interactive UI",
+      "Built real-time search and filtering to help users quickly find contacts by name or details.",
+      "Used local storage to persist all contact data across sessions without requiring a backend or database.",
+      "Responsive design across all device sizes",
+    ],
+    image: contactHub,
+    tag: "Contacts",
     tagColor: "bg-sky/10 border-sky/25 text-sky",
     iconBg: "bg-sky/10 border-sky/25 text-sky",
     gridBg: "from-sky/10 to-purple/10",
