@@ -5,6 +5,7 @@ import adasa from "@/assets/Screenshot 2026-05-06 025908.png";
 import nutriplan from "@/assets/Screenshot 2026-06-15 022722.png";
 import triviaQuiz from "@/assets/Screenshot 2026-06-15 023959.png";
 import contactHub from "@/assets/Screenshot 2026-06-15 025046.png";
+import storiaKids from "@/assets/Screenshot 2026-06-15 030703.png";
 import { StaticImageData } from "next/image";
 
 export type Project = {
@@ -99,7 +100,7 @@ export const projects: Project[] = [
     accent: "text-sky",
   },
   {
-    title: "nutriplan",
+    title: "Nutriplan",
     liveLink: "https://nutriplan-bice.vercel.app/",
     link: "https://github.com/marinafranswa/nutriplan",
     subtitle: " meal planning Web Application",
@@ -163,5 +164,27 @@ export const projects: Project[] = [
     gridBg: "from-sky/10 to-purple/10",
     gridLine: "rgba(56,189,248,0.1)",
     accent: "text-sky",
+  },
+  {
+    title: "StoriaKids",
+    liveLink: "https://storiakids.com/",
+    link: "https://gitlab.com/engahmedmagde27/website_storia_v2",
+    subtitle: "Personalized Children's Story Platform",
+    description:
+      "A responsive public-facing web application for creating personalized children's stories, featuring interactive story browsing, customization flows, and a smooth user experience built entirely with HTML, CSS, Bootstrap, and Vanilla JavaScript.",
+    tech: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    highlights: [
+      "Translated Figma designs into pixel-accurate, cross-browser-compatible interfaces without any JavaScript frameworks.",
+      "Built interactive story browsing and customization flows using Vanilla JavaScript for a seamless user experience.",
+      "Optimized for mobile responsiveness and performance, ensuring fast load times across all device sizes.",
+      "Integrated RESTful APIs via Fetch API to handle dynamic content, error states, and edge-case UI interactions.",
+    ],
+    image: storiaKids,
+    tag: "Children's App",
+    tagColor: "bg-pink/10 border-pink/25 text-pink",
+    iconBg: "bg-pink/10 border-pink/25 text-pink",
+    gridBg: "from-pink/10 to-purple/10",
+    gridLine: "rgba(236,72,153,0.1)",
+    accent: "text-pink",
   },
 ];

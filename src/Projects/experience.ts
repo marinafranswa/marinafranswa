@@ -38,7 +38,7 @@ export const items: TimelineItem[] = [
     title: "B.Sc. Computers and Information Technology",
     org: "Alexandria University & Egyptian E-Learning University",
     orgColor: "text-amber-400",
-    date: "Graduated Jul 2023 · GPA: 3.16 / 4.0",
+    date: "Graduated Jul 2023",
     description:
       "Joint program combining computer science fundamentals with practical information technology skills.",
     highlights: [],
