@@ -14,7 +14,7 @@ const navLinks = [
 
 const CvLink = ({ className }: { className?: string }) => (
   <Link
-    href="/marinaafranswa.pdf"
+    href="/public/Marina Slib.pdf"
     download
     className={`flex items-center gap-2 text-sm font-bold text-zinc-800 bg-amber-400 border-2 border-black rounded-lg shadow-[4px_4px_0px_0px_black] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all py-2 px-4 cursor-pointer ${className}`}
   >

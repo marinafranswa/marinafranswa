@@ -9,6 +9,26 @@ export type TimelineItem = {
 };
 export const items: TimelineItem[] = [
   {
+    iconBg: "bg-pink-500",
+    title: "Trainer(Part-time)",
+    org: "eYouth & DECI ",
+    orgColor: "text-pink-400",
+    date: "july 2026 – present",
+    description:
+      "Delivering educational content in a clear and engaging manner, combining theoretical explanations with hands-on activities",
+    highlights: [],
+  },
+  {
+    iconBg: "bg-teal-500",
+    title: "Frontend Developer",
+    org: "Self-employed ",
+    orgColor: "text-teal-400",
+    date: "Apr 2025 – present",
+    description:
+      "Dedicated this period to deepening my frontend expertise through self-directed projects",
+    highlights: [],
+  },
+  {
     iconBg: "bg-amber-500",
     title: "Frontend Development Diploma",
     org: "Route Academy — Route IT Training Center",
