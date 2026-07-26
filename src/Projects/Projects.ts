@@ -6,6 +6,7 @@ import nutriplan from "@/assets/Screenshot 2026-06-15 022722.png";
 import triviaQuiz from "@/assets/Screenshot 2026-06-15 023959.png";
 import contactHub from "@/assets/Screenshot 2026-06-15 025046.png";
 import storiaKids from "@/assets/Screenshot 2026-06-15 030703.png";
+import cosmo from "@/assets/Screenshot 2026-07-27 015935.png";
 import { StaticImageData } from "next/image";
 
 export type Project = {
@@ -181,6 +182,28 @@ export const projects: Project[] = [
     ],
     image: storiaKids,
     tag: "Children's App",
+    tagColor: "bg-pink/10 border-pink/25 text-pink",
+    iconBg: "bg-pink/10 border-pink/25 text-pink",
+    gridBg: "from-pink/10 to-purple/10",
+    gridLine: "rgba(236,72,153,0.1)",
+    accent: "text-pink",
+  },
+  {
+    title: "COSMOS",
+    liveLink: "https://cosmos-space-dashboard-phi.vercel.app/",
+    link: "https://github.com/marinafranswa/cosmos-space-dashboard",
+    subtitle: "space dashboard",
+    description:
+      "A responsive Space Explorer Dashboard Real-time space data from NASA & SpaceDevs and a smooth user experience built entirely with HTML, CSS, Bootstrap, and Vanilla JavaScript.",
+    tech: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    highlights: [
+      "Translated Figma designs into pixel-accurate, cross-browser-compatible interfaces without any JavaScript frameworks.",
+      "Built interactive story browsing and customization flows using Vanilla JavaScript for a seamless user experience.",
+      "Optimized for mobile responsiveness and performance, ensuring fast load times across all device sizes.",
+      "Integrated RESTful APIs via Fetch API to handle dynamic content, error states, and edge-case UI interactions.",
+    ],
+    image: cosmo,
+    tag: "space dashboard",
     tagColor: "bg-pink/10 border-pink/25 text-pink",
     iconBg: "bg-pink/10 border-pink/25 text-pink",
     gridBg: "from-pink/10 to-purple/10",
